@@ -25,7 +25,7 @@ class Solution:
         while(i<len(nums)):
             if(nums[i] == val):
                 nums[i],nums[-1]=nums[-1],nums[i]
-                nums.pop(i)
+                nums.pop()
             else:
                 i += 1
         print(nums)
@@ -33,5 +33,5 @@ class Solution:
         
                 
 s=Solution()
-print(s.removeElement([1,2,2,3],3))
+print(s.removeElement([1,2,2,3],2))
 # print(s.removeElement())
