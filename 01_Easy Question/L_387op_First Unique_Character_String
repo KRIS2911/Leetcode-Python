@@ -1,0 +1,15 @@
+class Solution:
+    def firstUniqChar(self, s: str) -> int:
+        # Use a dictionary to store counts
+        char_counts = {}
+
+        # First pass: Populate counts
+        for char in s:
+            char_counts[char] = char_counts.get(char, 0) + 1
+        
+        # Second pass: Find the first unique character's index
+        for i, char in enumerate(s):
+            if char_counts[char] == 1:
+                return i
+        
+        return -1
